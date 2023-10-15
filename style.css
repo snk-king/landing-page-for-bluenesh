@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+:root{
+    --primary: #234fc9;
+    --secondary: white;
+}
+
+.landing-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+  
+.project-column{
+    width: 40%;
+    height: 90vh;
+}
+
+
+.project-column{
+    overflow-y: scroll;
+}
+
+.project-column::-webkit-scrollbar{
+    display: none;
+}
+
+.project-column h2{
+    text-align: center;
+    font-size: 1.5em;
+    padding: 1em;
+}
+  
+.project-list {
+    list-style: none;
+    padding: 0;
+    
+}
+  
+.project-accordion {
+    margin: 1em 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+
+}
+  
+.project-accordion label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    cursor: pointer;
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+  
+.content {
+    max-height: 0;
+    background-color: var(--secondary);
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+  
+.image-container{
+    width: 50%;
+    padding-top: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.project-label {
+    display: none;
+}
+  
+.project-accordion input:checked + label {
+    background-color: var(--primary);
+    color: white;
+}
+  
+.project-accordion input:checked + label + .content {
+    max-height: 500px; 
+}
+  
+.count {
+    font-size: 24px;
+    font-weight: bold;
+}
+  
